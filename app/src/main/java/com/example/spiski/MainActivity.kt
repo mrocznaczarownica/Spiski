@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val feelRecycler:RecyclerView = root.findViewById
+        val feel_recycler : RecyclerView = root
 
     }
 }
