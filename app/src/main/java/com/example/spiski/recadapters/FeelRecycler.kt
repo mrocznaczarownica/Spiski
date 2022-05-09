@@ -10,8 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spiski.R
 
-class FeelRecycler(val context:Context, val list: ArrayList<feel>):
-    RecyclerView.Adapter<FeelRecycler.MyVH>() {
+class FeelRecycler(val list: ArrayList<feel>): RecyclerView.Adapter<FeelRecycler.MyVH>() {
     class MyVH(itemView: View):RecyclerView.ViewHolder(itemView) {
         val image:ImageView = itemView.findViewById(R.id.imageView)
         val textView:TextView = itemView.findViewById(R.id.textView)
@@ -19,7 +18,7 @@ class FeelRecycler(val context:Context, val list: ArrayList<feel>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeelRecycler.MyVH {
-        val root = LayoutInflater.from(context).inflate(R.layout.feel_adapter, parent, false)
+        val root = LayoutInflater.from(parent.context).inflate(R.layout.feel_adapter, parent, false)
         return MyVH(root)
     }
 
